@@ -53,7 +53,7 @@ const LandingDogListSection = () => {
       </motion.div>
       <div className="custom-container-large py-32">
         <div className="grid grid-cols-12 gap-10 items-center">
-          <div className="col-span-5 flex flex-col gap-4">
+          <div className="col-span-4 flex flex-col gap-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ const LandingDogListSection = () => {
             </motion.div>
           </div>
 
-          <div className="col-span-7 flex w-full gap-5">
+          <div className="col-span-8 flex w-full gap-5">
             {dogs.map((dog, idx) => (
               <motion.div
                 key={idx}
@@ -122,8 +122,8 @@ const LandingDogListSection = () => {
                 <Card className="relative flex-1 p-5 z-20">
                   <Image
                     src={AssetPath.getImagePath(`dog-${idx + 1}.png`)}
-                    width={400}
-                    height={400}
+                    width={720}
+                    height={720}
                     alt={dog.name}
                     style={{ objectFit: "cover" }}
                     className="rounded-lg -m-1"
