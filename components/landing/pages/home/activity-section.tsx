@@ -93,6 +93,7 @@ const ActivityItem = React.memo(
     );
   }
 );
+ActivityItem.displayName = "ActivityItem";
 
 const ActivityItemList = () => {
   const activities: Activity[] = React.useMemo(
