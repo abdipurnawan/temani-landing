@@ -27,7 +27,12 @@ const LandingServiceSection = () => {
   let [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
 
   return (
-    <div className="bg-primary">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      className="bg-primary"
+    >
       <div className="custom-container py-8 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-12">
           {services.map((service, idx) => {
@@ -87,7 +92,7 @@ const LandingServiceSection = () => {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

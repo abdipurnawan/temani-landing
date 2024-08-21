@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const LandingFooter = () => {
   return (
-    <div className="pt-10 mt-10 lg:mt-20 bottom-0">
+    <div className="pt-10 bottom-0">
       <div className="custom-container inset-0">
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-10">
           <motion.div
