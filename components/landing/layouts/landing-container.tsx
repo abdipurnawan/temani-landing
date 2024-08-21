@@ -10,7 +10,7 @@ const LandingContainer = ({
   return (
     <div className='main-font w-screen overflow-x-hidden min-h-screen'>
       <LandingNavbar />
-      <div className='flex flex-col justify-between min-h-screen custom-container lg:mt-20 2xl:mt-24'>
+      <div className='flex flex-col justify-between min-h-screen custom-container mt-16 lg:mt-20 2xl:mt-24'>
         <div>{children}</div>
         {/* <LandingFooter /> */}
         <div>

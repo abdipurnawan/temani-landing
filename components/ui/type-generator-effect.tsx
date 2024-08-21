@@ -39,7 +39,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="text-6xl font-extrabold tracking-tight lg:text-7xl"
+              className="text-5xl text-center lg:text-left md:text-6xl font-extrabold tracking-tight lg:text-7xl"
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
