@@ -1,6 +1,7 @@
 import React from 'react';
 import LandingNavbar from './landing-navbar';
 // import LandingNavbar from './landing-navbar';
+import * as motion from "@/components/ui/motion";
 
 const LandingContainer = ({
   children
@@ -9,7 +10,13 @@ const LandingContainer = ({
 }>) => {
   return (
     <div className='main-font w-screen overflow-x-hidden min-h-screen'>
-      <LandingNavbar />
+       <motion.div
+            className="text-center md:text-start"
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 2 }}
+          ><LandingNavbar /></motion.div>
+      
       <div className='flex flex-col justify-between min-h-screen custom-container mt-16 lg:mt-20 2xl:mt-24'>
         <div>{children}</div>
         {/* <LandingFooter /> */}
