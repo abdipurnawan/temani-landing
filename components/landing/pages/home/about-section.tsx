@@ -6,25 +6,7 @@ import * as motion from "@/components/ui/motion";
 
 const LandingAboutSection = () => {
   return (
-    <div className="custom-container grid grid-cols-1 lg:grid-cols-2 gap-20 items-center py-14">
-      <motion.div
-        className="w-full"
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <Image
-          src={AssetPath.getImagePath("about-1.png")}
-          width={720}
-          height={720}
-          style={{
-            objectFit: "cover",
-          }}
-          loading="lazy"
-          alt="Hero Image"
-        />
-      </motion.div>
-
+    <div className="custom-container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center py-10 lg:py-20">
       <div className="flex flex-col gap-6 h-full justify-center ">
         <div className="flex flex-col gap-3">
           <motion.div
@@ -84,6 +66,24 @@ const LandingAboutSection = () => {
           </div>
         </motion.div>
       </div>
+
+      <motion.div
+        className="w-full lg:order-first"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Image
+          src={AssetPath.getImagePath("about-1.png")}
+          width={720}
+          height={720}
+          style={{
+            objectFit: "cover",
+          }}
+          loading="lazy"
+          alt="Hero Image"
+        />
+      </motion.div>
     </div>
   );
 };
