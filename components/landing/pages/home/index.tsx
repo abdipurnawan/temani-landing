@@ -1,10 +1,13 @@
+import LandingAboutSection from "./about-section";
 import LandingHeroSection from "./hero-section";
+import LandingServiceSection from "./service-section";
 
 const HomePage = () => {
   return (
     <>
       <LandingHeroSection />
-      <LandingHeroSection />
+      <LandingServiceSection />
+      <LandingAboutSection />
     </>
   );
 };

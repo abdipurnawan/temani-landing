@@ -8,11 +8,11 @@ import WordPullUp from "@/components/magicui/word-pull-up";
 
 const LandingHeroSection = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+    <div className=" custom-container grid grid-cols-1 lg:grid-cols-2 items-center">
       <div className="flex flex-col gap-6 h-full justify-center mt-10 lg:-mt-14 2xl:-mt-16">
         <div className="flex flex-col gap-3">
           <motion.div
-            className="text-center md:text-start"
+            className="text-center lg:text-start"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}

@@ -13,10 +13,11 @@ type LogoProps = {
   href?: string;
 };
 
-export const Logo = ({ withText = true, href }: LogoProps) => {
+export const Logo = ({ withText = false, href }: LogoProps) => {
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
   const logo = AssetPath.getImagePath('logo.png');
+  const logoWithText = AssetPath.getImagePath('logo-with-text.png');
 
   useEffect(() => {
     setMounted(true);
@@ -28,7 +29,7 @@ export const Logo = ({ withText = true, href }: LogoProps) => {
     <Link href='/' className='flex items-center gap-2 cursor-pointer h-10 w-auto'>
       <Image
         className='h-full w-auto'
-        src={logo}
+        src={withText ? logoWithText : logo}
         alt='Logo'
         width={160}
         height={30}

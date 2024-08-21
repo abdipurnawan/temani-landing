@@ -9,6 +9,7 @@ import { Logo } from '@/components/ui/logo';
 import LandingNavigationMenu from './landing-navbar-menu';
 import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/ui/icons';
+import LandingMobileNavbarMenu from './landing-mobile-navbar-menu';
 
 const LandingNavbar = () => {
   const [isFloating, setIsFloating] = useState(false);
@@ -43,7 +44,7 @@ const LandingNavbar = () => {
       width: 'calc(100% - 2rem)', // Adjust based on your padding
       maxWidth: '68rem', // max-w-5xl equivalent
       borderRadius: '32px', // rounded-full equivalent
-      backgroundColor: 'rgba(255, 255, 255, 0.6)', // Slightly transparent
+      backgroundColor: 'rgba(255, 255, 255, 0.8)', // Slightly transparent
       boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
       backdropFilter: 'blur(4px)', // Add backdrop blur
       y: 29
@@ -55,7 +56,7 @@ const LandingNavbar = () => {
         <div className='px-10'>
           <div className='flex flex-row justify-between items-center'>
             <Logo />
-            {/* <LandingMobileNavigationMenu /> */}
+            <LandingMobileNavbarMenu />
           </div>
         </div>
       </div>
@@ -74,7 +75,7 @@ const LandingNavbar = () => {
           }>
             <div className={cn(['flex justify-between items-center py-3', isFloating && 'py-1'])}>
               <motion.div>
-                <Logo withText={!isFloating} />
+                <Logo />
               </motion.div>
               <motion.div>
                 <LandingNavigationMenu />
