@@ -86,7 +86,9 @@ import {
   CircleX,
   ListTodo,
   Newspaper,
-  Grid2X2
+  Grid2X2,
+  PawPrint,
+  Dog
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -167,6 +169,8 @@ export const Icons = {
   listTodo: ListTodo,
   newspaper: Newspaper,
   grid2x2: Grid2X2,
+  pawPrint: PawPrint,
+  dog: Dog,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

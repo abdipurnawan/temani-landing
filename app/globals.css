@@ -6,6 +6,10 @@
   .custom-container {
     @apply px-5 md:px-20 lg:px-16 xl:px-10 2xl:px-0 lg:mx-auto lg:max-w-[1200px];
   }
+
+  .custom-container-large {
+    @apply px-5 md:px-20 lg:px-16 xl:px-14 2xl:px-0 lg:mx-auto lg:max-w-[1440px];
+  }
 }
 
 @layer base {
