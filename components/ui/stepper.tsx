@@ -1,9 +1,8 @@
-import { cn } from "@/lib/utils";
-import React from "react";
+import React, { useRef } from "react";
 import { Button } from "./button";
 import { Icons } from "./icons";
-import { AnimatePresence } from "framer-motion";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 type StepperHeaderProps = {
   index: number;
@@ -86,32 +85,28 @@ const variants = {
     x: 0,
     opacity: 1,
   },
-  exit: (direction: number) => {
-    return {
-      zIndex: 0,
-      x: direction < 0 ? 50 : -50,
-      opacity: 0,
-    };
-  },
 };
 
 const Stepper = ({ items }: StepperProps) => {
-  const [[activeItem, direction], setActiveItem] = React.useState<
-    [StepperItem, number]
-  >([items[0], 0]);
+  const activeItemRef = useRef<StepperItem | null>(items[0]);
+  const directionRef = useRef<number>(0);
+
+  const [state, setState] = React.useState({});
 
   const handlePaginate = (newIndex: number, direction: number) => {
     const nextItem = items.find((item) => item.index === newIndex);
 
     if (nextItem) {
-      setActiveItem([nextItem, direction]);
+      activeItemRef.current = nextItem;
+      directionRef.current = direction;
+      setState({});
     }
   };
 
   const getVisibleItems = () => {
-    if (!activeItem) return [];
+    if (!activeItemRef.current) return [];
 
-    const currentIndex = activeItem.index;
+    const currentIndex = activeItemRef.current.index;
     const totalItems = items.length;
 
     let startIndex = Math.max(0, currentIndex - 1);
@@ -130,35 +125,34 @@ const Stepper = ({ items }: StepperProps) => {
   };
 
   const visibleItems = getVisibleItems();
+  const activeItem = activeItemRef.current!;
+  const direction = directionRef.current;
 
   const handleNext = () => {
-    handlePaginate(activeItem?.index + 1, 1);
+    handlePaginate(activeItem.index + 1, 1);
   };
 
   const handlePrev = () => {
-    handlePaginate(activeItem?.index - 1, -1);
+    handlePaginate(activeItem.index - 1, -1);
   };
 
   return (
     <div className="flex flex-col gap-5 w-full">
       <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 overflow-hidden">
-        <AnimatePresence>
-          {visibleItems.map((item) => (
-            <motion.div
-              key={item.index}
-              className={`relative group block h-full w-full ${
-                item.index !== activeItem.index ? "lg:block hidden" : ""
-              }`}
-              transition={{ duration: 0.5 }}
-            >
-              <StepperHeader
-                index={item.index}
-                title={item.title}
-                active={item.index === activeItem?.index}
-              />
-            </motion.div>
-          ))}
-        </AnimatePresence>
+        {visibleItems.map((item) => (
+          <div
+            key={item.index}
+            className={`relative group block h-full w-full ${
+              item.index !== activeItem.index ? "lg:block hidden" : ""
+            }`}
+          >
+            <StepperHeader
+              index={item.index}
+              title={item.title}
+              active={item.index === activeItem.index}
+            />
+          </div>
+        ))}
       </div>
 
       {/* content */}
@@ -171,8 +165,6 @@ const Stepper = ({ items }: StepperProps) => {
               variants={variants}
               initial="enter"
               animate="center"
-              // exit="exit"
-              className=""
               transition={{
                 x: { type: "spring", stiffness: 500, damping: 30 },
                 opacity: { duration: 0.5 },
