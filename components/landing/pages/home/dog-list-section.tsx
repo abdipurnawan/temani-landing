@@ -37,7 +37,9 @@ const LandingDogListSection = () => {
   let [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
 
   return (
-    <div className="relative bg-primary">
+    <div className="relative bg-primary overflow-hidden">
+      <div className="hidden lg:block absolute inset-0 bg-[url('/assets/svg/dog-footprint-pattern.svg')] bg-no-repeat"></div>
+
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -126,7 +128,7 @@ const LandingDogListSection = () => {
                     height={720}
                     alt={dog.name}
                     style={{ objectFit: "cover" }}
-                    className="rounded-lg -m-1"
+                    className="rounded-lg"
                   />
                   <div className="flex flex-col gap-2 mt-3">
                     <h4 className="text-base lg:text-2xl font-semibold">

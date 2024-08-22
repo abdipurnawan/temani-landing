@@ -23,7 +23,7 @@ const ContactUsSection = () => {
               Tentang Kami
             </h4>
             <div className="flex flex-col gap-8 mt-5">
-              <h2 className="text-4xl lg:text-5xl font-semibold leading-tight text-left lg:text-center">
+              <h2 className="text-4xl lg:text-5xl font-semibold leading-tight text-left">
                 Taman <br /> Penangkaran <br /> Anjing Kintamani
               </h2>
 

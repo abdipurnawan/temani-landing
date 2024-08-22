@@ -3,6 +3,7 @@
 import { motion, Variants } from "framer-motion";
 
 import { cn } from "@/lib/utils";
+import React from "react";
 
 interface WordPullUpProps {
   words: string;
@@ -41,7 +42,7 @@ export default function WordPullUp({
       )}
     >
       {words.split(" ").map((word, i) => (
-        <>
+        <React.Fragment key={i}>
           {word === "\n" ? (
             <br key={i} />
           ) : (
@@ -53,7 +54,7 @@ export default function WordPullUp({
               {word === "" ? <span>&nbsp;</span> : word}
             </motion.span>
           )}
-        </>
+        </React.Fragment>
       ))}
     </motion.h1>
   );
