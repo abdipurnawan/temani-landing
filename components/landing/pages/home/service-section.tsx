@@ -69,8 +69,8 @@ const LandingServiceSection = () => {
                   <Image
                     className="absolute top-0 right-0 rounded-tr-2xl"
                     src={AssetPath.getSvgPath(`dog-footprint.svg`)}
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     alt={service.title}
                   />
                   <div className="flex flex-col gap-4">
