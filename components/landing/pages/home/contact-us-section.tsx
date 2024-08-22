@@ -19,11 +19,11 @@ const ContactUsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <h4 className="text-base lg:text-xl font-normal text-muted-foreground text-center lg:text-left">
+            <h4 className="text-base lg:text-xl font-normal text-muted-foreground text-left">
               Tentang Kami
             </h4>
             <div className="flex flex-col gap-8 mt-5">
-              <h2 className="text-5xl font-semibold leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-semibold leading-tight text-left lg:text-center">
                 Taman <br /> Penangkaran <br /> Anjing Kintamani
               </h2>
 
@@ -31,10 +31,10 @@ const ContactUsSection = () => {
                 <div className="flex gap-3">
                   <Icons.mapPin className="h-8 w-8" />
                   <div className="flex flex-col gap-1">
-                    <h4 className="text-base lg:text-xl font-semibold">
+                    <h4 className="text-base lg:text-xl font-semibold text-left">
                       Alamat
                     </h4>
-                    <h4 className="text-base font-normal text-muted-foreground">
+                    <h4 className="text-base font-normal text-muted-foreground text-left">
                       Jl. Raya Bedugul No.23 Kabupaten Tabanan, Bali.
                     </h4>
                   </div>
@@ -43,10 +43,10 @@ const ContactUsSection = () => {
                 <div className="flex gap-3">
                   <Icons.mapPin className="h-8 w-8" />
                   <div className="flex flex-col gap-1">
-                    <h4 className="text-base lg:text-xl font-semibold">
+                    <h4 className="text-base lg:text-xl font-semibold text-left">
                       Email
                     </h4>
-                    <h4 className="text-base font-normal text-muted-foreground">
+                    <h4 className="text-base font-normal text-muted-foreground text-left">
                       temani@baliprov.go.id
                     </h4>
                   </div>
@@ -55,10 +55,10 @@ const ContactUsSection = () => {
                 <div className="flex gap-3">
                   <Icons.mapPin className="h-8 w-8" />
                   <div className="flex flex-col gap-1">
-                    <h4 className="text-base lg:text-xl font-semibold">
+                    <h4 className="text-base lg:text-xl font-semibold text-left">
                       Telepon
                     </h4>
-                    <h4 className="text-base font-normal text-muted-foreground">
+                    <h4 className="text-base font-normal text-muted-foreground text-left">
                       +62 361 278777
                     </h4>
                   </div>
@@ -67,10 +67,10 @@ const ContactUsSection = () => {
                 <div className="flex gap-3">
                   <Icons.mapPin className="h-8 w-8" />
                   <div className="flex flex-col gap-1">
-                    <h4 className="text-base lg:text-xl font-semibold">
+                    <h4 className="text-base lg:text-xl font-semibold text-left">
                       Instagram
                     </h4>
-                    <h4 className="text-base font-normal text-muted-foreground">
+                    <h4 className="text-base font-normal text-muted-foreground text-left">
                       temani_bali
                     </h4>
                   </div>
@@ -94,12 +94,12 @@ const ContactUsSection = () => {
             </h4>
 
             <div className="flex flex-col gap-8 mt-5">
-              <h2 className="text-5xl font-semibold leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-semibold leading-tight">
                 Kirim <br /> Kritik & Saran
               </h2>
             </div>
 
-            <div className="space-y-5 mt-5">
+            <div className="space-y-5 mt-5 text-left">
             <div className="flex flex-col gap-1">
               <Label htmlFor="name">Nama</Label>
               <Input id="name" type="text" name="name" placeholder="Masukkan nama Anda" />

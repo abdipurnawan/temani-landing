@@ -52,14 +52,14 @@ const LandingDogListSection = () => {
         />
       </motion.div>
       <div className="custom-container-large py-32">
-        <div className="grid grid-cols-12 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-10 lg:items-center">
           <div className="col-span-4 flex flex-col gap-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
             >
-              <h2 className="text-5xl font-bold tracking-tight text-white leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
                 Mereka yang <br />
                 siap untuk
                 <br /> Keluarga Baru
@@ -90,7 +90,7 @@ const LandingDogListSection = () => {
             </motion.div>
           </div>
 
-          <div className="col-span-8 flex w-full gap-5">
+          <div className="col-span-8 flex flex-col lg:flex-row w-full gap-5 mt-10 lg:mt-0">
             {dogs.map((dog, idx) => (
               <motion.div
                 key={idx}
@@ -119,7 +119,7 @@ const LandingDogListSection = () => {
                   )}
                 </AnimatePresence>
 
-                <Card className="relative flex-1 p-5 z-20">
+                <Card className="relative flex-1 p-5">
                   <Image
                     src={AssetPath.getImagePath(`dog-${idx + 1}.png`)}
                     width={720}

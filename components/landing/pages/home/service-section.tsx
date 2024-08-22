@@ -71,7 +71,6 @@ const LandingServiceSection = () => {
                     height={40}
                     alt={service.title}
                   />
-                  {/* </div> */}
                   <div className="flex flex-col gap-4">
                     <Image
                       src={AssetPath.getSvgPath(`service-${idx + 1}.svg`)}

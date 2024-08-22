@@ -88,7 +88,7 @@ const ActivityItem = React.memo(
           </h4>
         </div>
 
-        <Icons.chevronRight className="h-8 w-8 text-muted-foreground group-hover:text-white" />
+        <Icons.chevronRight className="h-8 w-8 text-muted-foreground group-hover:text-white hidden lg:block" />
       </div>
     );
   }
@@ -180,7 +180,7 @@ const ActivityItemList = () => {
       </motion.div>
 
       <motion.div
-        className="relative col-span-7 h-full mt-3 p-10"
+        className="hidden lg:relative col-span-7 h-full mt-3 p-10"
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.2 }}

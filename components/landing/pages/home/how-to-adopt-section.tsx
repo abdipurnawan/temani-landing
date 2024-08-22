@@ -31,7 +31,7 @@ const HowToAdoptItemContent = ({
           style={{ objectFit: "cover" }}
         />
       </div>
-      <p className="text-center font-extralight text-lg">
+      <p className="text-left lg:text-center font-extralight text-base lg:text-lg leading-6 lg:leading-7">
         {description}
       </p>
     </div>
@@ -92,7 +92,7 @@ const LandingHowToAdoptSection = () => {
           transition={{ duration: 0.4 }}
         >
           <div className="flex flex-col text-center gap-3">
-            <h2 className="text-5xl font-bold tracking-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">
               Bagaimana cara untuk{" "}
               <span className="text-primary">mulai mengadopsi?</span>
             </h2>

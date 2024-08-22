@@ -52,9 +52,9 @@ const LandingFAQSection = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="bg-primary min-h-[90vh]"
+      className="bg-primary"
     >
-      <div className="custom-container h-full flex flex-col justify-between gap-16 py-24 lg:pt-16">
+      <div className="custom-container h-full flex flex-col justify-between gap-10 lg:gap-16 py-10 lg:py-24 lg:pt-16">
         <div className="flex flex-col gap-5 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -68,7 +68,7 @@ const LandingFAQSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}
           >
-            <h2 className="text-5xl font-semibold leading-tight text-white">
+            <h2 className="text-4xl lg:text-5xl font-semibold leading-tight text-white">
               Pertanyaan <br /> Seputar Temani
             </h2>
           </motion.div>

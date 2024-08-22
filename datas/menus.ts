@@ -12,22 +12,22 @@ export const landingMenu: LandingMenu[] = [
   },
   {
     title: 'Cek Perkin',
-    href: '/forums'
+    href: '/#'
   },
   {
     title: 'Tentang',
-    href: '/program'
+    href: '/#'
   },
   {
     title: 'Artikel',
-    href: '#gallery-section'
+    href: '/#'
   },
   {
     title: 'Galeri',
-    href: '/news'
+    href: '/#'
   },
   {
     title: 'Kontak',
-    href: '/news'
+    href: '/#'
   },
 ];

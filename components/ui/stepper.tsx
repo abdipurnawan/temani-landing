@@ -18,7 +18,7 @@ const StepperHeader = ({
 }: StepperHeaderProps) => {
   return (
     <div className="flex flex-col gap-3">
-      <div className="flex items-center gap-2">
+      <div className="lg:flex lg:items-center lg:gap-2 hidden">
         <div
           className={cn([
             "rounded-full h-8 w-8 border p-1 transition-all duration-500",
@@ -139,7 +139,9 @@ const Stepper = ({ items }: StepperProps) => {
           {visibleItems.map((item) => (
             <motion.div
               key={item.index}
-              className="relative group block h-full w-full"
+              className={`relative group block h-full w-full ${
+                item.index !== activeItem.index ? "lg:block hidden" : ""
+              }`}
               transition={{ duration: 0.5 }}
             >
               <StepperHeader
