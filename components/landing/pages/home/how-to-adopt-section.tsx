@@ -29,6 +29,7 @@ const HowToAdoptItemContent = ({
           height={500}
           className="w-full"
           style={{ objectFit: "cover" }}
+          priority
         />
       </div>
       <p className="text-left lg:text-center font-extralight text-base lg:text-lg leading-6 lg:leading-7">
