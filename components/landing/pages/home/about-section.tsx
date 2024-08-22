@@ -61,7 +61,7 @@ const LandingAboutSection = () => {
                 className="text-5xl font-bold tracking-tight text-primary"
                 suffix="+"
               />
-              <h4 className="text-base lg:text-xl font-light text-black text-center lg:text-left">
+              <h4 className="text-base lg:text-xl font-light text-black text-left">
                 Anjing dalam penangkaran
               </h4>
             </motion.div>
@@ -79,7 +79,7 @@ const LandingAboutSection = () => {
                 className="text-5xl font-bold tracking-tight text-primary"
                 suffix="+"
               />
-              <h4 className="text-base lg:text-xl font-light text-black text-center lg:text-left">
+              <h4 className="text-base lg:text-xl font-light text-black text-left">
                 Anjing siap untuk diadopsi
               </h4>
             </motion.div>
