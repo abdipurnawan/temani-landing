@@ -41,7 +41,7 @@ const ContactUsSection = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <Icons.mapPin className="h-8 w-8" />
+                  <Icons.mailCheck className="h-8 w-8" />
                   <div className="flex flex-col gap-1">
                     <h4 className="text-base lg:text-xl font-semibold text-left">
                       Email
@@ -53,7 +53,7 @@ const ContactUsSection = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <Icons.mapPin className="h-8 w-8" />
+                  <Icons.phone className="h-8 w-8" />
                   <div className="flex flex-col gap-1">
                     <h4 className="text-base lg:text-xl font-semibold text-left">
                       Telepon
@@ -65,7 +65,7 @@ const ContactUsSection = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <Icons.mapPin className="h-8 w-8" />
+                  <Icons.instagram className="h-8 w-8" />
                   <div className="flex flex-col gap-1">
                     <h4 className="text-base lg:text-xl font-semibold text-left">
                       Instagram

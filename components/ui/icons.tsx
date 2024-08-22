@@ -90,7 +90,9 @@ import {
   PawPrint,
   Dog,
   MapPin,
-  Send
+  Send,
+  Phone,
+  MailCheck
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -175,6 +177,8 @@ export const Icons = {
   dog: Dog,
   mapPin: MapPin,
   send: Send,
+  phone: Phone,
+  mailCheck: MailCheck,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"
