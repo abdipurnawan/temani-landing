@@ -57,7 +57,9 @@ const LandingFAQSection = () => {
       <div className="hidden lg:block absolute inset-y-0 left-0 w-[45%] bg-[url('/assets/svg/dog-footprint-pattern.svg')] bg-no-repeat bg-left bg-contain -ml-16"></div>
       <div className="hidden lg:block absolute inset-y-0 right-0 w-[45%] bg-[url('/assets/svg/question-mark-pattern.svg')] bg-no-repeat bg-right bg-contain -mr-20 -mb-48"></div>
 
-      <div className="custom-container h-full flex flex-col justify-between gap-10 lg:gap-16 py-10 lg:py-24 lg:pt-16">
+      <div className="custom-container h-full flex flex-col justify-between gap-10 lg:gap-16 py-10  min-h-[100vh]">
+        <div/>
+        <div className="space-y-14">
         <div className="flex flex-col gap-5 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -103,6 +105,8 @@ const LandingFAQSection = () => {
             </AnimatePresence>
           </Accordion>
         </div>
+        </div>
+        <div/>
       </div>
     </motion.div>
   );

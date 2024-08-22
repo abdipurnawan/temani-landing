@@ -1,7 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import * as React from "react";
-import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/ui/icons";
 import AssetPath from "@/lib/asset-path";
 import Image from "next/image";
@@ -19,10 +19,10 @@ const LandingActivitySection = () => {
           transition={{ duration: 0.4 }}
         >
           <div className="flex flex-col text-center gap-3">
-            <h2 className="text-5xl font-bold tracking-tight">
+            <h2 className="text-5xl font-bold tracking-tight text-left lg:text-center">
               Aktifitas <span className="text-primary">Menyenangkan</span>
             </h2>
-            <h4 className="text-base lg:text-xl font-light text-muted-foreground text-center lg:text-left">
+            <h4 className="text-base lg:text-xl font-light text-muted-foreground text-left lg:text-center">
               Mengasah keterampilan anjing untuk kehidupan yang lebih baik
             </h4>
           </div>
@@ -72,7 +72,7 @@ const ActivityItem = React.memo(
         <div className="flex-col gap-2">
           <h4
             className={cn(
-              "text-base lg:text-xl font-light text-center lg:text-left group-hover:text-white",
+              "text-base lg:text-xl font-light text-left group-hover:text-white",
               isActive ? "text-white" : ""
             )}
           >
@@ -80,7 +80,7 @@ const ActivityItem = React.memo(
           </h4>
           <h4
             className={cn(
-              "text-base lg:text-xl font-light text-muted-foreground text-center lg:text-left group-hover:text-white",
+              "text-base lg:text-xl font-light text-muted-foreground text-left group-hover:text-white",
               isActive ? "text-white" : ""
             )}
           >
@@ -88,7 +88,12 @@ const ActivityItem = React.memo(
           </h4>
         </div>
 
-        <Icons.chevronRight className="h-8 w-8 text-muted-foreground group-hover:text-white hidden lg:block" />
+        <Icons.chevronRight
+          className={cn([
+            "h-8 w-8 text-muted-foreground group-hover:text-white hidden lg:block",
+            isActive ? "text-white" : "",
+          ])}
+        />
       </div>
     );
   }
@@ -119,7 +124,8 @@ const ActivityItemList = () => {
       {
         id: 4,
         title: "Bersosialisasi",
-        description: "Memperkuat ikatan dan interaksi dengan lingkungan sekitar.",
+        description:
+          "Memperkuat ikatan dan interaksi dengan lingkungan sekitar.",
         imagePath: AssetPath.getImagePath(`activity-4.png`),
       },
     ],
@@ -131,9 +137,9 @@ const ActivityItemList = () => {
   );
   const [hoveredActivityId, setHoveredActivityId] = React.useState<
     number | null
-  >(null);
+  >(1);
 
-  const displayedActivityId = hoveredActivityId || selectedActivityId;
+  const displayedActivityId = hoveredActivityId; //|| selectedActivityId;
 
   const handleClick = React.useCallback(
     (id: number) => {
@@ -150,7 +156,7 @@ const ActivityItemList = () => {
   );
 
   const handleMouseLeave = React.useCallback(() => {
-    setHoveredActivityId(null);
+    // setHoveredActivityId(null);
   }, [setHoveredActivityId]);
 
   return (
@@ -168,7 +174,7 @@ const ActivityItemList = () => {
               title={activity.title}
               description={activity.description}
               isActive={
-                selectedActivityId === activity.id ||
+                // selectedActivityId === activity.id ||
                 hoveredActivityId === activity.id
               }
               onClick={() => handleClick(activity.id)}

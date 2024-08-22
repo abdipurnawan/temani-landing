@@ -3,6 +3,7 @@ import { Icons } from "@/components/ui/icons";
 import AssetPath from "@/lib/asset-path";
 import Image from "next/image";
 import * as motion from "@/components/ui/motion";
+import NumberTicker from "@/components/ui/number-ticker";
 
 const LandingAboutSection = () => {
   return (
@@ -16,10 +17,10 @@ const LandingAboutSection = () => {
             transition={{ duration: 0.4 }}
           >
             <div className="flex flex-col gap-3">
-              <h2 className="text-5xl font-bold tracking-tight">
+              <h2 className="text-5xl font-bold tracking-tight text-left">
                 Tentang <span className="text-primary">temani</span>
               </h2>
-              <h4 className="text-base lg:text-xl font-light text-muted-foreground text-center lg:text-left">
+              <h4 className="text-base lg:text-xl font-light text-muted-foreground text-left">
                 Di sini, sahabat sejati dilahirkan. Temukan cinta tanpa syarat
                 dengan Anjing Kintamani.
               </h4>
@@ -28,7 +29,7 @@ const LandingAboutSection = () => {
         </div>
 
         <motion.div
-          className="flex justify-center lg:justify-start"
+          className="flex justify-start"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
@@ -48,21 +49,40 @@ const LandingAboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <div className="flex flex-col gap-3 border-l-[1px] border-primary py-8 pl-4">
-            <h2 className="text-5xl font-bold tracking-tight text-primary">
-              250+
-            </h2>
-            <h4 className="text-base lg:text-xl font-light text-black text-center lg:text-left">
-              Anjing dalam penangkaran
-            </h4>
+          <div className="relative flex flex-col gap-3 border-l-[1px] border-primary py-8 pl-4 overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0, x: "-100%" }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="relative"
+            >
+              <NumberTicker
+                value={250}
+                className="text-5xl font-bold tracking-tight text-primary"
+                suffix="+"
+              />
+              <h4 className="text-base lg:text-xl font-light text-black text-center lg:text-left">
+                Anjing dalam penangkaran
+              </h4>
+            </motion.div>
           </div>
-          <div className="flex flex-col gap-3 border-l-[1px] border-primary py-8 pl-4">
-            <h2 className="text-5xl font-bold tracking-tight text-primary">
-              50+
-            </h2>
-            <h4 className="text-base lg:text-xl font-light text-black text-center lg:text-left">
-              Anjing siap untuk diadopsi
-            </h4>
+
+          <div className="relative flex flex-col gap-3 border-l-[1px] border-primary py-8 pl-4 overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0, x: "-100%" }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="relative"
+            >
+              <NumberTicker
+                value={50}
+                className="text-5xl font-bold tracking-tight text-primary"
+                suffix="+"
+              />
+              <h4 className="text-base lg:text-xl font-light text-black text-center lg:text-left">
+                Anjing siap untuk diadopsi
+              </h4>
+            </motion.div>
           </div>
         </motion.div>
       </div>

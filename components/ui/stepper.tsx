@@ -42,7 +42,14 @@ const StepperHeader = ({
         ></div>
       </div>
 
-      <div className="p-2 w-full border border-dashed rounded-lg border-muted-foreground/50 flex flex-col gap-2">
+      <div
+        className={cn([
+          "p-2 w-full flex flex-col gap-2 transition-all duration-100",
+          active
+            ? "border border-dashed rounded-lg border-muted-foreground/50"
+            : "border-none",
+        ])}
+      >
         <span
           className={cn([
             "text-sm font-thin",

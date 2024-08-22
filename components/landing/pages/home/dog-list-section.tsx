@@ -121,7 +121,7 @@ const LandingDogListSection = () => {
                   )}
                 </AnimatePresence>
 
-                <Card className="relative flex-1 p-5">
+                <Card className="relative flex-1 p-5 z-10">
                   <Image
                     src={AssetPath.getImagePath(`dog-${idx + 1}.png`)}
                     width={720}

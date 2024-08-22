@@ -83,13 +83,13 @@ const ContactUsSection = () => {
 
       <div className="">
         <motion.div
-          className="text-center lg:text-start"
+          className="-start"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
         >
           <Card className="border-none shadow-2xl p-6">
-            <h4 className="text-base lg:text-xl font-normal text-muted-foreground text-center lg:text-left">
+            <h4 className="text-base lg:text-xl font-normal text-muted-foreground text-left">
               Kontak
             </h4>
 

@@ -92,11 +92,11 @@ const LandingHowToAdoptSection = () => {
           transition={{ duration: 0.4 }}
         >
           <div className="flex flex-col text-center gap-3">
-            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-left lg:text-center">
               Bagaimana cara untuk{" "}
               <span className="text-primary">mulai mengadopsi?</span>
             </h2>
-            <h4 className="text-base lg:text-xl font-light text-muted-foreground text-center">
+            <h4 className="text-base lg:text-xl font-light text-muted-foreground text-left lg:text-cente">
               Langkah mudah untuk menemukan sahabat sejati Anda.
             </h4>
           </div>
@@ -109,7 +109,7 @@ const LandingHowToAdoptSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.2 }}
       >
-        <Card className="border-none p-10 shadow-lg mt-5 flex flex-col gap-5 items-center  w-full lg:w-2/3">
+        <Card className="border-none p-10 shadow-lg mt-5 flex flex-col gap-5 items-center w-full lg:w-2/3">
           <Stepper items={steps} />
         </Card>
       </motion.div>

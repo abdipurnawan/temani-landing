@@ -46,7 +46,7 @@ const LandingServiceSection = () => {
                 transition={{ duration: 0.3, delay: idx * 0.2 }}
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className="relative group  block p-2 h-full w-full"
+                className="relative group block p-2 h-full w-full"
               >
                 <AnimatePresence>
                   {hoveredIndex === idx && (
@@ -65,7 +65,7 @@ const LandingServiceSection = () => {
                     />
                   )}
                 </AnimatePresence>
-                <Card className="relative p-4 border-none">
+                <Card className="relative p-4 border-none z-10">
                   <Image
                     className="absolute top-0 right-0 rounded-tr-2xl"
                     src={AssetPath.getSvgPath(`dog-footprint.svg`)}

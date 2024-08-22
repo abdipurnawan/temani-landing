@@ -52,7 +52,7 @@ const LandingNavbar = () => {
   };
   return (
     <>
-      <div className={`fixed left-0 right-0 top-0  bg-white shadow-soft-xl py-5 z-20 block lg:hidden`}>
+      <div className={`fixed left-0 right-0 top-0  bg-white shadow-sm py-3 rounded-b-xl z-20 block lg:hidden`}>
         <div className='px-10'>
           <div className='flex flex-row justify-between items-center'>
             <Logo />

@@ -28,8 +28,8 @@ const LandingMobileNavbarMenu = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <div className="p-2 rounded-full bg-secondary">
-          <Icons.menu className="h-7 w-7 text-primary" />
+        <div className="p-2 rounded-full bg-secondary/70">
+          <Icons.menu className="h-6 w-6 text-primary" />
         </div>
       </SheetTrigger>
       <SheetContent side="right" className="">
